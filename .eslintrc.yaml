@@ -1,0 +1,45 @@
+env:
+  node: true
+  jest: true
+
+extends:
+  - airbnb-base
+  - airbnb-typescript/base
+  - plugin:@typescript-eslint/recommended
+  - plugin:prettier/recommended
+
+ignorePatterns:
+  - 'dist/'
+  - 'envs/'
+  - 'logs/'
+  - 'node_modules/'
+  - 'license'
+  - '.gitignore'
+  - '.nvmrc'
+  - '.eslintrc.yaml'
+  - '.prettierrc.yaml'
+
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+  project: 'tsconfig.json'
+  sourceType: 'module'
+  tsconfigDirRoot: __dirname
+
+plugins:
+  - '@typescript-eslint'
+  - prettier
+
+root: true
+
+rules:
+  '@typescript-eslint/no-empty-interface': warn
+  '@typescript-eslint/no-empty-function': warn
+  '@typescript-eslint/no-explicit-any': warn
+  '@typescript-eslint/no-shadow': warn
+  '@typescript-eslint/no-unused-expressions': warn
+  '@typescript-eslint/no-unused-vars': warn
+  '@typescript-eslint/no-use-before-define': off
+  '@typescript-eslint/no-useless-constructor': warn
+  'import/extensions': off
+  'import/prefer-default-export': warn

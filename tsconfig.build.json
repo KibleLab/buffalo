@@ -1,0 +1,4 @@
+{
+  "exclude": ["dist", "envs", "logs", "test", "node_modules", "**/*spec.ts"],
+  "extends": "./tsconfig.json"
+}
